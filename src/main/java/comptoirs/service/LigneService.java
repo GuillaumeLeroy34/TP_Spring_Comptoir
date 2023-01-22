@@ -1,15 +1,14 @@
 package comptoirs.service;
 
+import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
+
 import comptoirs.dao.CommandeRepository;
 import comptoirs.dao.LigneRepository;
 import comptoirs.dao.ProduitRepository;
-import comptoirs.entity.Commande;
 import comptoirs.entity.Ligne;
-import comptoirs.entity.Produit;
 import jakarta.transaction.Transactional;
 import jakarta.validation.constraints.Positive;
-import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 @Service
 @Validated // Les contraintes de validatipn des méthodes sont vérifiées
