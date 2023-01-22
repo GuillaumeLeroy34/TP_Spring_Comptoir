@@ -26,8 +26,10 @@ INSERT INTO Client(code, societe, contact, fonction, adresse, ville, region, cod
 -- Cette commande a déja été livrée, on ne peut plus ajouter de lignes (règle métier à vérifier)
 INSERT INTO Commande(numero, client_code, saisiele, envoyeele, port, destinataire, adresse, ville, region, code_postal, pays, remise) VALUES 
     ( 99999, '2COM', '1994-11-16', '1994-11-21', 50.00, 'Bon app''', '12, rue des Bouchers', 'Marseille', NULL, '13008', 'France', 0.00);
-INSERT INTO Ligne(commande_numero, produit_reference, quantite) VALUES ( 99999, 98, 15);
+INSERT INTO Ligne(commande_numero, produit_reference, quantite) VALUES ( 99999, 98, 21);
+ --↑ changé la valeur de cette commande, en l'état cela n'en faisait pas un gros client ( 15 + 70 + 10= 95, inférieur a 100 qui est le critère pour les gros clients)
 INSERT INTO Ligne(commande_numero, produit_reference, quantite) VALUES ( 99999, 99, 70);
+
 -- Cette commande n'a pas encore été livrée, on peut encore ajouter des lignes
 INSERT INTO Commande(numero, client_code, saisiele, envoyeele, port, destinataire, adresse, ville, region, code_postal, pays, remise) VALUES
     ( 99998, '2COM', '1994-11-29', NULL, 831.00, 'Bon app''', '12, rue des Bouchers', 'Marseille', NULL, '13008', 'France', 0.00);
